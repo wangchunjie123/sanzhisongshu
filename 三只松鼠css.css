@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    /* border: 1px solid red; */
+}
+.shu{
+    
+    width: 100%;
+    height: 200px;
+    background: url(./img/大房子.png) ;
+    background-size: 100%;
+    animation: shuye 4s  linear 1s forwards;
+}
+.top{
+    width: 100%;
+    height: 100px;
+    background-color:#000000 ;
+}
+.top2{
+    width: 1737px;
+    height:100px; 
+    margin: 0px auto;
+}
+.top2 li{
+    list-style: none;
+    float: left;
+    padding-left: 30px;
+    /* border: 1px solid brown; */
+    text-align: center;
+}
+.top a{
+    text-decoration: none;
+    
+    line-height: 100px;
+    color: aliceblue;
+}
+.top2 li:hover a{
+    color:#F78D24;
+}
+.top1 .top3{
+    float: right;
+    list-style: none;
+    color: aliceblue;
+    border: 1px solid blue;
+}
+
+.max{
+    height: 4000px;
+    width: 100%;
+    background: url(./img/云彩2.png) , url(./img/云彩3.png)no-repeat,
+    url(./img/云彩4.png) no-repeat;
+    background-color: #25ABFD;
+    
+    
+}
+.shuye{
+    z-index: 1000;
+    width: 1737px;
+    height: 3000px;
+    position:absolute;
+    background: url(./img/开局树叶.png) no-repeat 0px -1335px;
+    background-size: 100%;
+    animation: shuye 4s  linear 1s forwards,shuye1 1s linear 6s forwards;
+    
+    
+}
+/* .shu{
+    
+    width: 1737px;
+    height: 1289px;
+    background: url(./img/大房子.png)  no-repeat 0px -1289px;
+    background-size: 100%;
+    animation: shuye 4s  linear 1s forwards;
+} */
+.shu{
+    z-index: 1;
+    height: 1243px;
+    width: 1737px;
+    background: url(./img/大房子.png) no-repeat 0px 0px,
+    url(./img/小星星.png) no-repeat 0px 0px,
+    url(./img/云彩.png) no-repeat 300px 0px;
+    /* animation: shu 4s  linear 1s forwards; */
+    /* background:url(./img/小星星.png) no-repeat 0px 0px; */
+    margin: 0px auto;
+    position:absolute;
+    
+    
+}
+/* .wen{
+    width: 800px;
+    height: 300px;
+    margin:200px auto;
+    color: aliceblue;
+    font-size: 70px;
+    text-align: center;
+    
+}
+.wen span{
+    box-shadow: 10px 10px ;
+} */
+.fang{
+    
+    height: 1243px;
+    width: 1737px;
+    background: url(./img/超大房子.png) no-repeat 0px 816px;
+    /* animation: shu 4s  linear 1s forwards; */
+    margin: -100px auto;
+    
+    
+}
+.xiao{
+    width: 1737px;
+    height:1360px;
+    background: url(./img/小房子.png) no-repeat 0px 0px;
+    /* border: 1px solid black; */
+    margin: -300px auto;
+}
+.xiao1{
+    width: 1737px;
+    height:1360px;
+    background: url(./img/小房子2.png) no-repeat 0px 0px;
+    /* border: 1px solid black; */
+    margin: -800px auto;
+}
+.gao{
+    width: 1737px;
+    height:1360px;
+    background: url(./img/高房子.png) no-repeat 0px 0px;
+    /* border: 1px solid black; */
+    margin: -1000px auto;
+}
+.wen{
+    background: url(./img/三只松鼠.png) no-repeat -1000px 0px;
+    width: 500px;
+    height: 300px;
+    margin: 400px auto;
+    border: 1px solid black;
+}
+
+@keyframes shuye1{
+    
+    100%{
+        background: none;
+    }
+}
+
+@keyframes shuye{
+    0%{
+        background-position:0px -1335px ;
+    }
+    100%{
+        background-position:0px 300px;
+        
+    }
+}
+@keyframes shu{
+    0%{
+        background-position:0px -2624px ;
+    }
+    100%{
+        background-position:0px 0px;
+        
+    }
+}

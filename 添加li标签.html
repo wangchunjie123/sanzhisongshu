@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin-left: 20px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <button>添加十个li</button>
+    <ul></ul>
+</body>
+<script>
+    var but = document.querySelector('button');
+    // var li = document.createElement('li');
+    var ul = document.querySelector('ul');
+    var arr = ['red', 'pink', 'blue', 'skyblue'];
+    var num = 0;
+
+    but.onclick = function () {
+        for (var i = 0; i < 10; i++) {
+            var li = document.createElement('li');
+            ul.appendChild(li);
+            li.style.backgroundColor = arr[num];
+            num++;
+            if (num == arr.length - 1) {
+                num = 0;
+            }
+        }
+    }
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for(var i = 1; i <= 12 ;i++){
+        //     for(var j = 0; j <= 23; j++){
+        //         console.log(i+'点'+j+'分');
+        //     }
+        // }
+
+
+        // for(var i = 1 ; i <= 9; i++){
+        //     for(var j = 1;j <= i;j++){
+        //         document.write(j+'*'+i+'='+j*i+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+        //     }
+        //     document.write('<br/>')
+        // }
+
+        // for(var i = 9 ; i >=1; i--){
+        //     for(var j = 1;j <= i;j++){
+        //         document.write(j+'*'+i+'='+j*i+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+        //     }
+        //     document.write('<br/>')
+        // }
+
+
+        // for(var i = 1; i <= 5; i++){
+        //    var  score = prompt('请输入第'+i+'名同学成绩')-0;
+        //     if(score < 0 || isNaN(score)){
+        //         alert('输入有误，重新输入');
+        //         i--;
+        //         continue;
+                
+        //     }
+        //     document.write('第'+i+'名同学成绩是：'+score+'<br/>');
+        // }
+
+
+        // var arr = [5,5,4,4,3,3,2,2,1,1];
+        // for(var i in arr){
+        //     console.log(arr[i]);
+        // }
+        // for(var i = 0 ; i <= arr.length-1; i++){
+        //     for(var j = 0; j <= arr.length - i -1;j++){
+        //         if(arr[i] < arr[i+1]){
+        //             var tag = arr[i];
+        //             arr[i] = arr[i+i];
+        //             arr[i+1] = tag;
+        //         }
+        //     }
+        // }
+        // console.log(arr);
+
+
+        var arr = [5,5,4,4,3,3,2,2,1,1];
+        for(var i = 0; i < arr.length;i++){
+            for(var j = i + 1; j < arr.length;j++){
+                if(arr[i] == arr[j]){
+                    arr.splice(j,1);
+                    j--;
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    用户名：<input type="text">
+    <span></span>
+</body>
+<script>
+    var inp = document.querySelector('input');
+    var span_ = document.querySelector('span');
+    inp.onfocus=function(){
+        span_.innerHTML='请输入6-16个字符';
+        span_.style.color='black';
+    }
+    inp.onblur=function(){
+        if(inp.value.length<6||inp.value.length>16){
+            span_.innerHTML='格式错误，请输入6-16个字符';
+            span_.style.color='red';
+        }else{
+            span_.innerHTML='格式正确';
+            span_.style.color='green';
+        }
+    }
+    
+</script>
+</html>

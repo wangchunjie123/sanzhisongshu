@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       
+       li{
+           list-style: none;
+           float: left;
+           
+       }
+       li img{
+             width: 150px;
+       }
+       
+   </style>
+</head>
+<body>
+    <ul>
+        <li><img src="./云彩.png" alt=""></li>
+        <li><img src="./云彩2.png" alt=""></li>
+        <li><img src="./云彩3.png" alt=""></li>
+        <li><img src="./云彩4.png" alt=""></li>
+        
+    </ul>
+    <script>
+        var img = document.querySelector('ul').querySelectorAll('img');
+        for (var i = 0;i<img.length;i++){
+            img[i].onclick=function(){
+                document.body.style.background='url('+this.src+')';
+            }
+        }
+    </script>
+</body>
+</html>

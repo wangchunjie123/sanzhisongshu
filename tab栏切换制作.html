@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .max {
+            width: 500px;
+            height: 500px;
+            margin: 200px auto;
+        }
+
+        .top {
+            width: 500px;
+            height: 60px;
+            background-color: aquamarine;
+        }
+
+        .top li {
+            list-style: none;
+            float: left;
+            padding-left: 50px;
+            line-height: 60px;
+        }
+
+        .a {
+            display: none;
+        }
+
+        .bg {
+            background-color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max">
+        <div class="top">
+            <ul>
+                <li>商品1</li>
+                <li>商品2</li>
+                <li>商品3</li>
+                <li>商品4</li>
+            </ul>
+        </div>
+        <div class="a" style='display: block;'>商品1</div>
+        <div class="a">商品2</div>
+        <div class="a">商品3</div>
+        <div class="a">商品4</div>
+    </div>
+</body>
+
+<script>
+    var top = document.getElementsByClassName('top');
+    var li = document.querySelectorAll('li');
+    var a1 = document.querySelectorAll('.a');
+    console.log(a1);
+    for (var i = 0; i < li.length; i++) {
+        li[i].setAttribute('index', i);
+        console.log(li[i]);
+        li[i].onclick = function () {
+            for (var i = 0; i < li.length; i++) {
+                li[i].style.backgroundColor = '';
+
+
+            }
+            this.style.backgroundColor = 'red';
+            var index = this.getAttribute('index');
+            for (var i = 0; i < a1.length; i++) {
+                a1[i].style.display = 'none';
+            }
+            a1[index].style.display = 'block';
+        }
+        // var index = li[i].getAttribut('index');
+        // a1[index].style.display = 'block';
+    }
+    // for (var j = 0; j < a1.length; j++) {
+    //         li[i].onclick = function () {
+    //             for (var j = 0; j < a1.length; j++) {
+    //                 a1[j].style.display = 'none';
+    //             }
+    //             this.style.display = 'block';
+    //         }
+    //     }
+
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function result() {
+        //     var num1 = prompt('请输入第一个数字');
+        //     var num2 = prompt('请输入第二个数字');
+        //     num1 = Number(num1);
+        //     num1 = Number(num1);
+        //     alert([num1 + num2, num1 * num2, num1 / num2, num1 - num2]);
+        // }
+        // result();
+
+
+
+        // function result1(num1,num2){
+        //    return num1 > num2 ? num1:num2;
+        // }
+        // var num1 = prompt('请输入第一个数字');
+        // var num2 = prompt('请输入第二个数字');
+        // alert(result1(1,2));
+
+
+
+        function zhi(num) {
+            if (num == 0 || num == 1 || num < 0) {
+                alert('不是质数');
+            } else {
+                var tag = true;
+                for (var i = 2; i < num; i++) {
+                    if (num % i == 0) {
+                        tag = false;
+                    }
+
+                }
+                if (tag) {
+                    alert(num + '是质数');
+                } else {
+                    alert(num + '不是质数');
+                }
+
+            }
+
+        }
+        var num = prompt('请输入数字');
+        num = Number(num);
+        zhi(num);
+    </script>
+
+</body>
+
+</html>

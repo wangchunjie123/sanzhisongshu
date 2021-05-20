@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div></div>
+<body>
+    <script>
+
+        // function getRandom(min, max) {
+        //     return Math.floor(Math.random() * (max - min + 1)) + min;
+        // }
+        // var b = getRandom(1, 10);
+        // var c = 1;
+        // for (var i = 1; i > 0; i++) {
+        //     var a = prompt('请输入1-10之间数字');
+        //     if (c > 10) {
+        //         alert('十次机会用完');
+        //         break;
+        //     }else if (a > b) {
+        //         alert('数字太大，继续猜');
+        //         c++;
+        //     } else if (a < b) {
+        //         alert('数字太小，继续猜');
+        //         c++;
+        //     } else if (getRandom(1, 10) == a) {
+        //         alert('恭喜猜中');
+        //         break;
+        //     } 
+
+        // }
+
+        // var date = new Date('2020-3-15  8:8:8');
+        // console.log(date);
+
+        // var div_ = document.getElementsByTagName('div')[0];
+        // setInterval(function () {
+        //     var date = new Date(); 
+        //     var year = date.getFullYear();
+        //     var month = date.getMonth() + 1;
+        //     var day = date.getDate();
+        //     var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六',];
+        //     var week = date.getDay();
+        //     var hours = date.getHours();
+        //     var minu = date.getMinutes();
+        //     var secon = date.getSeconds();
+        //     var a = '今天是' + year + '年' + month + '月' + day + '日' + hours + ':' + minu + ':' + time(secon) + '\t' + arr[week];
+        //     console.log(a);
+        //     div_.innerHTML=a;
+        // },
+        // 1000
+        // )
+        // function time(s) {
+        //     return s > 10 ? s : '0' + s
+        // }
+
+
+        // var arr = [1,2,3,4,5,6,7];
+        // for (var i =0; i < arr.length;i++){
+        //     for(var j = i+1; j < arr.length;j++){
+        //         if(arr[i] < arr[j]){
+        //             var a = arr[i];
+        //             arr[i] = arr[j];
+        //             arr[j] = a
+        //         }
+        //     }
+        // }
+        // console.log(arr);
+
+        // var arr = [1,2,3,4,5];
+        // for (var i = 0;i < arr.length;i++){
+        //     for(var j = i+1;j<arr.length;j++){
+        //         if(arr[i] < arr[j]){
+        //             var a = arr[i];
+        //              arr[i] = arr[j];
+        //             arr[j] = a;
+        //         }
+        //     }
+        // }
+        // console.log(arr);
+
+
+        var arr = [1,2,3,4,5];
+        for (var i = 0; i <arr.length; i++){
+            for (var j = i+1; j < arr.length;j++){
+                if(arr[i] < arr[j]){
+                    var a = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = a;
+                }
+            }
+
+
+        }
+        console.log(arr);
+    </script>
+</body>
+
+</html>

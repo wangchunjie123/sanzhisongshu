@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       
+    </style>
+</head>
+<body>
+    <input type="radio" name="bos" id="" onclick="books()">哈哈
+    <input type="radio" name="bos" id="" onclick="books()">哈哈
+    <br>
+    <img >
+    <span></span>
+    <script>
+        function books(){
+            var ipt = document.getElementsByTagName('input');
+            var img = document.querySelector('img');
+            var span = document.querySelector('span');
+            if(ipt[0].checked){
+                img.src='./加入我们.png';
+                span.innerHTML='加入我们';
+                span.style.color='red';
+            }
+            if(ipt[1].checked){
+                img.src='./品牌文化.jpg';
+                span.innerHTML='品牌文化';
+                span.style.color='blue';
+            }
+
+        }
+    </script>
+</body>
+</html>

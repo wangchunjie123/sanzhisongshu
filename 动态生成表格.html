@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>添加</button>
+    <table cellspacing='0px'>
+        <thead>
+            <tr>
+                <td>姓名</td>
+                <td>科目</td>
+                <td>成绩</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+<script>
+    var datas = [
+        {
+            name: '小明',
+            kemu: 'javascript',
+            score: '100'
+        },
+        {
+            name: '小明',
+            kemu: 'javascript',
+            score: '100'
+        },
+        {
+            name: '小明',
+            kemu: 'javascript',
+            score: '100'
+        },
+        {
+            name: '小明',
+            kemu: 'javascript',
+            score: '100'
+        }
+    ];
+    var tbody = document.querySelector('tbody');
+    var btn = document.querySelector('button');
+    for (var i = 0; i < datas.length; i++) {
+        var tr = document.createElement('tr');
+        tbody.appendChild(tr);
+        for (var k in datas[i]) {
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            td.innerHTML=datas[i][k];
+            
+        }
+        var td1 = document.createElement('td');
+        tr.appendChild(td1);
+        td1.innerHTML='<a href = "javascript">删除</a>';
+    }
+    var as = document.querySelectorAll('a');
+    for(var i = 0; i < as.length;i++){
+        as[i].onclick = function(){
+            tbody.removeChild(this.parentNode.parentNode);
+        }
+    }
+   
+
+
+
+
+
+
+</script>
+
+</html>

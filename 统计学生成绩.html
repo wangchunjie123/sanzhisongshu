@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = prompt('请输入班级总人数')-0;
+        var result = 0;
+        var num1 = 0;
+        
+        for(var i = 1 ; i<=num;i++){
+            var score = prompt('请输入第'+i+'个学生分数')-0;
+            if(score < 0){
+                alert('学生分数不能为负数,请重新输入');
+                i--;
+                 
+            }else if(score >= 80){
+                num1 += 1;
+            }
+            document.write('第'+i+'个学生分数'+score+'<br/>');
+            
+            result += score;
+        }
+        document.write('班级总分数：'+result+'<br/>');
+        document.write('大于80分的人数：'+num1);
+        
+    </script>
+</body>
+</html>

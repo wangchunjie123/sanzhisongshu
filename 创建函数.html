@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <button onclick="fn(prompt('请输入成绩'))">点击我录入成绩</button>
+    <button onclick="fn1()">点击我显示成绩</button>
+    <script>
+        // (function(name){
+        //     alert('自己调用自己');
+        // })('张三');
+
+        // var fn1 = function(){
+        //     alert('自己调用自己');
+        // };
+        // fn1();
+
+        // for (var i = 1; i <= 5; i++) {
+        //     setTimeout(function () {
+        //         console.log(i);
+        //     }, i * 1000)
+        // }
+        var a = [];
+        
+            function fn(name) {
+                a.push(name);
+            }
+            function fn1() {
+                for(var i = 1;i<a.length;i++){
+                    document.write('第'+i+'名同学的成绩'+a+'<br/>');
+                }
+                
+            }
+        
+
+
+    </script>
+</body>
+
+</html>

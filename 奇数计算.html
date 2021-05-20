@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var num = 0;
+        // for (var i = 1; i <= 100; i++) {
+        //     if(i % 2 == 0){
+        //         num += i;
+        //     }
+        // }
+        // console.log(num);
+
+        // var num1 = 0;
+        // for (var i = 1; i <= 100; i++) {
+        //     if(i % 2 != 0){
+        //         num1 += i;
+        //     }
+        // }
+        // console.log(num1);
+
+        // var num2 = 0;
+        // for(var i = 2; i<=100;i+=2){
+        //     num2 += i;
+        // }
+        // console.log(num1);
+        //    var sum = 0;
+        //    for(var i = 0.0001;i <= 8848 ;i*=2){
+        //         sum++;
+        //    }
+        //    console.log(sum);
+
+        //    var sum1 = 0.0001;
+        //    for(var i = 1; i > 0; i++){
+        //         sum1 *= 2;
+        //         if(sum1 >= 8848){
+        //             break;
+        //         }
+        //    }  
+        //    console.log(i);
+
+        // var a = prompt('你爱我吗？');
+        // while (a != '我爱你' && a != '爱你') {
+        //     var a = prompt('你爱我吗？');
+        // }
+        // alert('我也爱你');
+
+
+        // var num = prompt('请输入数字');
+        // var tag ;
+        // if(num <= 1){
+        //     alert(num+'不是质数');
+        // }else{
+        //     tag = true;
+        //     for(i = 2; i < num ; i++){
+        //         if(num % i == 0){
+        //             tag = false;
+        //         }
+        //     }
+        // }
+        // if(tag){
+        //     alert(num+'是质数');
+        // }else{
+        //     alert(num+'不是质数');
+        // }
+
+
+        // var num = prompt('请输入100 - 1000之间的数');
+        // if(num < 100 || num > 1000){
+        //     alert('非法数字');
+        // }else{
+        //     var ge = num % 10;
+        //     console.log(ge);
+        //     var shi = parseInt((num - parseInt(num * 0.01)* 100-ge)*0.1);
+        //     console.log(shi);
+        //     var bai = parseInt(num * 0.01);
+        //     console.log(bai);
+        // }
+        // if(ge*ge*ge + shi*shi*shi + bai * bai *bai == num) {
+        //     alert('是水仙花数');
+        // }else{
+        //     alert('不是水仙花数');
+        // }
+        
+
+        // for(var i = 100; i < 1000;i++){
+        //     var ge = i % 10;
+        //     // console.log(ge);
+        //     var shi = parseInt((i - parseInt(i * 0.01)* 100-ge)*0.1);
+        //     // console.log(shi);
+        //     var bai = parseInt(i * 0.01);
+        //    // console.log(bai);
+        //     if(ge*ge*ge + shi*shi*shi + bai * bai *bai == i){
+        //         console.log(i);
+        //     }
+        // }
+
+
+        // var arr = [122,135,146,784,513,944,9462,632,9557,624,51,415];
+        // function arr(){
+        //     var max = arguments[0];
+        //     for(var i = 1; i < arguments.length;i++){
+        //         if(arguments[i] > max){
+        //             max = arguments[i];
+        //         }
+        //     }
+        //     return max;
+        // }
+        // console.log(arr(122,135,146,784,513,944,9462,632,9557,624,51,415));
+
+
+        // function reverse(arr){
+        //     var newArr = [];
+        //     for(var i = arr.length-1;i >= 0;i--){
+        //         newArr[newArr.length] = arr[i];
+        //     }
+        //     return newArr;
+        // }
+        // var arr1 = reverse([1,2,3,4,5,6,7,8,9]);
+        // console.log(arr1);
+
+
+        // function mao(arr){
+        //     var newArr = [];
+        //     for(var i = 0; i < arr.length;i++){
+        //         for(var j = 0;j < arr.length - i - 1;j++){
+        //             if(arr[j] > arr[j+1]){
+        //                 var tag = arr[j];
+        //                 arr[j] = arr[j+1];
+        //                 arr[j+1] = tag;
+        //             }
+        //         }
+        //     }
+        //     return arr;
+        // }
+        // var arr1 = mao([5,4,3,2,1]);
+        // console.log(arr1);
+
+        function year(a){
+            
+            var fglt = false;
+            if(a % 400 == 0 || a % 4 ==0 && a % 100 != 0){
+                fglt = true;
+            }
+            return fglt;
+            
+        }
+
+        function yue(){
+            
+            var a  =prompt('请输入年份');
+            
+            if(year(a)){
+                alert(29);
+            }else{
+                alert(28);
+            }
+            year();
+        }
+        yue();
+       
+        
+        // console.log(a);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       
+    </style>
+    
+</head>
+<body>
+    <div></div>
+    
+    <script>
+        // var myMath = {
+        //     PI:3.1415926535,
+        //     max:function(){
+        //         var max = arguments[0];
+        //         for (var i = 0 ;i < arguments.length;i++){
+        //             if(arguments[i] > max){
+        //                 max = arguments[i];
+        //             }
+        //         }
+        //         return max;
+        //     },
+        //     min:function(){
+        //         var min = arguments[0];
+        //         for (var i = 0 ;i < arguments.length;i++){
+        //             if(arguments[i] > min){
+        //                 max = arguments[i];
+        //             }
+        //         }
+        //         return min;
+        //     }
+
+        // }
+        // console.log(myMath.max(1,2,3));
+        // console.log(myMath.min(1,2,3));
+
+
+        // var arr = [1,1,1,1,10];
+        // var arr1 = arr.join('-');
+        // document.write(arr1);
+
+
+        // var arr = [2,5,2,1,1];
+        // arr.sort();
+        // document.write(arr);
+
+        // var arr = [2,5,2,1,1];
+        // arr.sort(function(a,b){
+        //     return b - a;
+        // });
+        // document.write(arr);
+
+        // var arr = [2,5,2,1,1];
+        // var arr1 = [2,5,2,1,1];
+        // arr = arr1.concat(arr);
+        // document.write(arr);
+
+
+        var div_=document.getElementsByTagName('div')[0];
+        setInterval(function(){
+            var x=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth()+1;
+            var day = date.getDate();
+            var hour = date.getHours();
+            var minu = date.getMinutes();
+            var sec = date.getSeconds();
+            var week = date.getDay();
+            var str = year+'年'+month+'月'+day+'日'+hour+':'+minu+':'+time(sec)+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+x[week];
+            div_.innerHTML=str;
+
+        }, 1000);
+        function time(s){
+            return s > 10? s : '0'+s;
+        }
+        
+    </script>
+    
+</body>
+</html>

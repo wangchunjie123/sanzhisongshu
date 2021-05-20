@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 800px;
+            height: 800px;
+            margin: 50px auto;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .bg {
+            background-color: rgb(99, 97, 97);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>
+                <button>开始</button>
+                <button>停止</button>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    var li_ = document.querySelectorAll('li');
+    var btn1 = document.querySelectorAll('button')[0];
+    var btn2 = document.querySelectorAll('button')[1];
+    var timer;
+    var arr = [0, 1, 2, 5, 8, 7, 6, 3];
+    var num = 0;
+    btn1.onclick = function () {
+        clearInterval(timer);
+        timer = setInterval(function () {
+            for (var i = 0; i < li_.length; i++) {
+                li_[i].className = '';
+            }
+            li_[arr[num]].className = 'bg';
+            num++;
+            if(num == 8){
+                num = 0;
+            }
+            
+        }, 300)
+    }
+    btn2.onclick=function(){
+        clearInterval(timer);
+    }
+</script>
+
+</html>

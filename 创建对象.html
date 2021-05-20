@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var obj = {
+        //     uname:'可可',
+        //     type:'阿拉斯加',
+        //     eag:'5岁',
+        //     color:'棕红色',
+
+        // }
+        // console.log(obj.uname);
+        // console.log(obj['eag']);
+
+        // var obj = new Object();
+        // obj.name = '鸣人';
+        // obj.sax = '男';
+        // obj.age = '19岁';
+        // obj.skull = '影分身术';
+        // console.log(obj.name);
+        // console.log(obj['age']);
+
+        function Ying(name, shu, xue) {
+            this.uname = name;
+            this.shu = shu;
+            this.xue = xue;
+            this.gong = function (jin) {
+                console.log(jin);
+            }
+        }
+        var lianpo = new Ying('廉颇', '力量型', '500血量');
+        console.log(lianpo.uname);
+        console.log(lianpo.shu);
+        console.log(lianpo.xue);
+        lianpo.gong('近战');
+
+        var houyi = new Ying('后裔', '射手', '100血量');
+        console.log(houyi.uname);
+        console.log(houyi.shu);
+        console.log(houyi.xue);
+        houyi.gong('远程');
+
+    </script>
+</body>
+
+</html>

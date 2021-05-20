@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = prompt('请输入科目数量');
+        var b = 0;
+        a = Number(a);
+        while (isNaN(a)) {
+            alert('请输入数字');
+            a = prompt('请输入科目数量');
+        }
+        for (i = 1; i <= a; i++) {
+            var c = prompt('请输入分数');
+            c = Number(c);
+            if (isNaN(c)) {
+                alert('请输入数字');
+                break;
+            } else {
+                b += c;
+                alert('成绩总和为：' + b);
+                alert('平均分数为:' + b / a);
+            }
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

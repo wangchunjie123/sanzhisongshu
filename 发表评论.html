@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p a{
+            float: right;
+        }
+        p{
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <div>
+        <p></p>
+    </div>
+</body>
+<script>
+    var but = document.querySelector('button');
+    var div = document.querySelector('div');
+    but.onclick = function () {
+        var text = document.querySelector('textarea');
+
+        var p = document.createElement('p');
+        var span = document.createElement('span');
+        div.insertBefore(p, div.children[0]);
+        // p.insertBefore(span);
+        // span.innerHTML='删除';
+        p.innerHTML = text.value+'<a href="javascript:;">删除</a>';
+        var as = document.querySelector('a');
+        as.onclick=function(){
+            div.removeChild(this.parentNode);
+        }
+    }
+</script>
+
+</html>
